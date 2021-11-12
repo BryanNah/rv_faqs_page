@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ Page</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="container">
+    <div style="text-align: center">
+        <h3> Frequently Asked Questions </h3>
+    </div>
+    <div class="panel-group">
+        <div class="category">General questions</div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">Can I access my account using a different device?</button>
+            <div class="panel">
+                <p>Yes, you can access the app on a different device as long as you remember your username and password
+                    because they are required to access your farm information on the app.</p>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">Is the farm data entered on the app secured?</button>
+            <div class="panel">
+                <p>Client data is the most precious thing we handle day-to-day. We use stronger encryption and password
+                    requirements as well as transit encryption (SSL/TLS in the form of HTTPS) to secure usernames,
+                    passwords and any other important data that is transmitted from your device to our server.</p>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">How helpful / relevant is the information entered in the app?
+            </button>
+            <div class="panel">
+                <p>Information you enter helps us organise your data in one place and create meaning out of it. Using
+                    information you provide, our algorithms are able to assess your farm’s financial position and
+                    provide collective data with pattern recognition to help you understand trends of your farming
+                    activities.
+                </p>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">Where do I find Raining vegetables?
+            </button>
+            <div class="panel">
+                <p>We’re currently located and operate in Kampala, Uganda.</p>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">How do I contact customer service?
+            </button>
+            <div class="panel">
+                <p>Call us on 0772-the number Mon-Sat 9:00AM - 5:00PM.</p>
+            </div>
+        </div>
+        <div class="category">User Questions</div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">How do I update my personal information?
+            </button>
+            <div class="panel">
+                <p>Go to your profile page, under settings. You will see a button named update farmer, click on it and
+                    it will display a page where to update your personal information.
+                </p>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">How do I add a new farmer in the app?
+            </button>
+            <div class="panel">
+                <p>Go to your profile page, under settings. You will see a button named Add farmer, click on it and
+                    it will display a page where to add new farmer information.
+                </p>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion"> I’m having difficulties creating an account. What should I do?
+            </button>
+            <div class="panel">
+                <p>Call our customer service help line and someone will walk and assist you with creating an account.
+                </p>
+            </div>
+        </div>
+        <div class="category">Service Questions</div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">How do I add the financial accounting information in the app?
+            </button>
+            <div class="panel">
+                <p>Go to the bookkeeping page, under the Service on the menu. You will find a list of different sectors
+                    in boxes. Click on the sector you want to add information to and then click on update farmer
+                    information.</p>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion"> How do I find the analytics feature?
+            </button>
+            <div class="panel">
+                <p>Go to the choose analytics, under the Service on the menu. You will find a list of different sectors
+                    in boxes. Click on the sector you want to see the analytical information.</p>
+            </div>
+        </div>
+
+        <div class="category">Subscription Questions</div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">How do I find the pricing page?
+            </button>
+            <div class="panel">
+                <p> Follow this link to subscribe now. (link will be added).
+                </p>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">How do I subscribe to the app?
+            </button>
+            <div class="panel">
+                <p>Follow this link to subscribe now. (link will be added).
+                </p>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">What do I do when my subscription expires?
+            </button>
+            <div class="panel">
+                <p>You can renew your subscription every month by visiting your profile page and clicking the
+                    subscription button to make your subscription payment. You can also call us on 077-the-number to get
+                    assistance to complete the payment.
+                </p>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">How do I unsubscribe?
+            </button>
+            <div class="panel">
+                <p>Go to your profile page, under settings, you will see the option to unsubscribe. -- more on this
+                    after implementation.
+                </p>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion"> In case I have paid more, can I be refunded and how?
+            </button>
+            <div class="panel">
+                <p>Yes, you will be refunded. Call our customer service number and someone will help you through the
+                    refund process.
+                </p>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px">
+            <button class="accordion">I’m having difficulties processing the payment / subscription. What should I do?
+            </button>
+            <div class="panel">
+                <p>Call our customer service number and someone will help you through the refund process.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var accordionClasses = document.getElementsByClassName("accordion");
+    var index;
+
+    for (index = 0; index < accordionClasses.length; index++) {
+        accordionClasses[index].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+</body>
+</html>
